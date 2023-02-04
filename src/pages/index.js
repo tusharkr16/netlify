@@ -7,7 +7,8 @@ import weightTrainingImage from '../images/weight_training_area.jpeg';
 
 const BlogSection = (props) => {
 
-  const isMobile = window.innerWidth < 768;
+  const isBrowser = () => typeof window !== "undefined"
+  const isMobile = isBrowser() && window.innerWidth < 768;
   const getImage = () => (
     <img
         src={props.imgSrc}
