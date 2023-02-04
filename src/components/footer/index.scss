@@ -1,0 +1,81 @@
+@use "../../styles/variables.scss" as variables;
+@use '../../styles/breakpoints.scss' as bp;
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    background: variables.$primary_bg;
+    color: #fff;
+    padding: 24px;
+    align-items: center;
+
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        display: flex;
+        .footer_item {
+            flex-grow: 1;
+            width: 33%;
+            display: flex;
+            flex-direction: column;
+
+            .wrapper {
+                width: fit-content;
+            }
+        }
+        .about {
+            .title {
+                font-size: 1.2rem;
+            }
+        }
+        .navigation {
+            .wrapper {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            ul {
+                list-style: none;
+                padding-left: 0;
+                margin: 0;
+            }
+        }
+        .contact {
+            .wrapper {
+                margin-left: auto;
+            }
+        }
+    }
+
+    @include bp.sm {
+        .container {
+            max-width: 100%;
+        }
+    }
+    
+    @include bp.md {
+        .container {
+            max-width: 720px;
+        }
+    }
+    
+    @include bp.lg {
+        .container {
+            max-width: 960px;
+        }
+    }
+    
+    @include bp.xlg {
+        .container {
+            max-width: 1140px;
+            
+        }
+    }
+    
+    @include bp.xxl {
+        .container {
+            max-width: 1320px;
+        }
+    }
+
+}

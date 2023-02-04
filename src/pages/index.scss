@@ -1,0 +1,48 @@
+@use '../styles/breakpoints.scss' as bp;
+
+.home {
+  margin-top: 24px;
+  .blog-section {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    background-color: #f1f0f0;
+
+    img {
+      width: 50%;
+      height: auto;
+      margin-right: 20px;
+    }
+
+    .blog-text {
+      width: 50%;
+      text-align: justify;
+      padding: 24px;
+    }
+    h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 20px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+  }
+
+
+  @include bp.sm {
+    .blog-section {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 12px;
+    }
+    .blog-text {
+      padding: 0px;
+    }
+  }
+
+}

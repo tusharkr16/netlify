@@ -1,0 +1,38 @@
+@use '../../styles/breakpoints.scss' as bp;
+
+.layout_container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+@include bp.sm {
+    .layout_container {
+        max-width: 100%;
+    }
+}
+
+@include bp.md {
+    .layout_container {
+        max-width: 720px;
+    }
+}
+
+@include bp.lg {
+    .layout_container {
+        max-width: 960px;
+    }
+}
+
+@include bp.xlg {
+    .layout_container {
+        max-width: 1140px;
+        
+    }
+}
+
+@include bp.xxl {
+    .layout_container {
+        max-width: 1320px;
+    }
+}
