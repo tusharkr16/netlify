@@ -1,0 +1,27 @@
+@use "../styles/breakpoints.scss" as bp;
+
+.about {
+    margin-top: 24px;
+  .main {
+    display: flex;
+    justify-content: space-between;
+    img {
+        width: 50%;
+        height: auto;
+        margin-right: 20px;
+    }
+    .content {
+      width: 50%;
+      padding: 24px;
+      text-align: justify;
+      font-size: 1.3rem;
+    }
+  }
+
+  @include bp.mobile {
+    .main {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}

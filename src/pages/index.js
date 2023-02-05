@@ -3,7 +3,7 @@ import { Footer, Header, HeroSection, Layout } from "../components";
 import "./index.scss";
 
 import communityImage from '../images/community.jpeg';
-import weightTrainingImage from '../images/weight_training_area.jpeg';
+import fitnessAreaImage from '../images/fitness_area.jpeg';
 
 const BlogSection = (props) => {
 
@@ -68,7 +68,7 @@ const Home = () => {
             position="right"
           />
           <BlogSection 
-            imgSrc={weightTrainingImage}
+            imgSrc={fitnessAreaImage}
             title="Our Equipments"
             description="Transform your workout with our top-of-the-line gym equipment. With the latest technology and a wide variety of machines, you'll be able to take your fitness to the next level. From free weights to cardio equipment, we have everything you need to achieve your goals. Come experience the difference and see why our gym is a cut above the rest. Sign up now and start reaching your full potential."
             position="left"
