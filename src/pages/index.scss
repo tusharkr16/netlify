@@ -33,7 +33,7 @@
   }
 
 
-  @include bp.sm {
+  @include bp.mobile {
     .blog-section {
       flex-direction: column;
       justify-content: center;

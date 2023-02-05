@@ -35,7 +35,13 @@
         color: #fff;
         display: inline-block;
         padding: 0 16px;
+        cursor: pointer;
     }
+
+    .main_nav .main_nav_list li:hover {
+        text-decoration: underline;
+    }
+
 
     @media (min-width: 960px) {
         .main_header .container {

@@ -1,6 +1,26 @@
 import React from "react";
+import { navigate } from "@reach/router";
 import "./index.scss";
 import companyLogo from "../../images/Squat2Fit_Logo.jpeg";
+
+const tabs = [
+  {
+    title: "Home",
+    route: "/"
+  },
+  {
+    title: "About Us",
+    route: "/about"
+  },
+  {
+    title: "Community",
+    route: "/community"
+  },
+  {
+    title: "Contact",
+    route: "/contact"
+  },
+]
 
 const Header = () => {
   return (
@@ -12,10 +32,11 @@ const Header = () => {
         </div>
         <nav class="main_nav">
           <ul class="main_nav_list">
-            <li>Home</li>
-            <li>About us</li>
-            <li>Our clients</li>
-            <li>Contact</li>
+            {
+              tabs.map(tab => {
+                return <li role="button" onClick={() => navigate(tab.route)}>{tab.title}</li>
+              })
+            }
           </ul>
         </nav>
       </div>

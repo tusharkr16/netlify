@@ -4,6 +4,12 @@ $lg_width: 992px;
 $xlg_width: 1200px;
 $xxl_width: 1400px;
 
+@mixin mobile {
+    @media only screen and (max-width: #{$md_width - 1px}) {
+        @content;
+    }
+}
+
 @mixin xs {
     @media only screen and (max-width: #{$sm_width - 1px}) {
         @content;
