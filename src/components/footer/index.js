@@ -12,14 +12,16 @@ const Footer = () => {
           <div className="description">
             <strong>Address:</strong>
             <br />
-            1st floor, Sikka Cham, B Block, DDA Market, Dilshad Garden,
-            Delhi, 110095
+            1ST FLOOR SIKKA CHAM B BLOCK DDA MARKET 
+    DILSHAD GARDEN 
+    DELHI, DELHI 110095
+
             <br />
             <strong>Mobile No: </strong>
-            9999777798
+            09999777798
             <br />
             <strong>Email: </strong>
-            squat2fit@squat2fit.in
+            SQUAT2FIT@SQUAT2FIT.IN
           </div>
         </div>
         <div className="navigation footer_item">
