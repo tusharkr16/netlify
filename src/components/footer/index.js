@@ -12,9 +12,9 @@ const Footer = () => {
           <div className="description">
             <strong>Address:</strong>
             <br />
-            1ST FLOOR SIKKA CHAM B BLOCK DDA MARKET 
-    DILSHAD GARDEN 
-    DELHI, DELHI 110095
+            1ST FLOOR SIKKA CHAM B BLOCK DDA MARKET
+            DILSHAD GARDEN
+            DELHI, DELHI 110095
 
             <br />
             <strong>Mobile No: </strong>
@@ -24,28 +24,18 @@ const Footer = () => {
             SQUAT2FIT@SQUAT2FIT.IN
           </div>
         </div>
-        <div className="navigation footer_item">
-          <div className="wrapper">
-            <h3 className="title">Quick Links</h3>
-            <ul>
-              <li>Home</li>
-              <li>About</li>
-              <li>Contact</li>
-            </ul>
-          </div>
-        </div>
         <div className="contact footer_item">
           <div className="wrapper">
-            <h3 className="title">Contact</h3>
+            <h3 className="title">Connect With Us On :</h3>
             <div className="icon_wrapper">
               <a className="social_icon facebook" href="https://www.facebook.com/pages/Squat2fit-Unisex-gym/113054150112092" target="_blank">
-                <FontAwesomeIcon icon={faFacebookF}/>
+                <FontAwesomeIcon icon={faFacebookF} />
               </a>
               <a className="social_icon instagram" href="https://www.instagram.com/squat2fit/" target="_blank">
-                <FontAwesomeIcon icon={faInstagram}/>
+                <FontAwesomeIcon icon={faInstagram} />
               </a>
               <a className="social_icon whatsapp" href="https://api.whatsapp.com/send?phone=9999777798&text=Hello" target="_blank">
-                <FontAwesomeIcon icon={faWhatsapp}/>
+                <FontAwesomeIcon icon={faWhatsapp} />
               </a>
             </div>
           </div>

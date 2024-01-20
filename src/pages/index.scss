@@ -2,17 +2,22 @@
 
 .home {
   margin-top: 24px;
+
   .blog-section {
     display: flex;
     flex-direction: row;
     margin-bottom: 20px;
     justify-content: space-between;
-    background-color: #f1f0f0;
+    background-color: rgb(15 19 22);
+    color: aliceblue;
+    margin-top: 50px;
 
     img {
       width: 50%;
       height: auto;
+      // height: 250px;
       margin-right: 20px;
+      margin-top: 40px;
     }
 
     .blog-text {
@@ -20,13 +25,17 @@
       text-align: justify;
       padding: 24px;
     }
+
     h2 {
-      font-size: 24px;
+      font-size: 34px;
       font-weight: bold;
       margin-bottom: 10px;
+      display: flex;
+      justify-content: center;
     }
+
     p {
-      font-size: 20px;
+      font-size: 23px;
       line-height: 1.5;
       margin-bottom: 20px;
     }
@@ -39,10 +48,28 @@
       justify-content: center;
       align-items: center;
       padding: 12px;
+      // border: 2px solid black;
+      img {
+        width: 100%;
+        height: 264px;
+        margin-right: 0;
+      }
+      .blog-text {
+      width: 100%;
+      text-align: justify;
+      padding: 24px;
     }
+    }
+
+
     .blog-text {
       padding: 0px;
     }
   }
 
+}
+
+.contact-build{
+  background-color: aliceblue;
+  color: aqua;
 }

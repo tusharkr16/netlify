@@ -1,14 +1,91 @@
-import React from 'react'
-import { Footer, Header, Layout } from '../components'
+import React, { useEffect } from 'react'
+import { Footer, Header, HeroSection, Layout } from '../components'
+import { faFacebookF, faInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import './index.scss'
+import "./contact.scss"
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+import AOS from 'aos';
+import communityImage from '../images/community.jpeg'
+
+
+const BlogSection = (props) => {
+
+  const isBrowser = () => typeof window !== "undefined"
+  const isMobile = isBrowser() && window.innerWidth < 768;
+  const getImage = () => (
+    <img
+      src={props.imgSrc}
+      alt="Image"
+      data-aos={isMobile ? "fade-up" : "fade-left"}
+    />
+  );
+
+  const getText = () => (
+    <div class="blog-text" data-aos={isMobile ? "fade-up" : "fade-right"}>
+      <h2>{props.title}</h2>
+      <p>
+        {props.description}
+      </p>
+    </div>
+  );
+
+  const getBlogSection = (position) => {
+    if (position === 'right') {
+      return (
+        <>
+          {getImage()}
+          {getText()}
+        </>
+      )
+    }
+
+    if (position === 'left' && isMobile) {
+      return (
+        <>
+          {getText()}
+          {getImage()}
+        </>
+      )
+    }
+
+
+  }
+
+  return (
+    <div class="blog-section">
+      {getBlogSection(props.position)}
+    </div>
+  );
+};
 
 const Community = () => {
+  useEffect(() => {
+    AOS.init({
+      delay: 800,
+      duration: 700,
+    });
+  }, []);
   return (
     <>
       <Header />
-      <Layout>
-        Community
-      </Layout>
-      <Footer />
+      <Layout className="contact-build">
+        <div className="home">
+          <BlogSection
+            imgSrc={communityImage}
+            title="Our Vibrant Community"
+            description={
+              <>
+                Welcome to the heart of Squat2Fit — our thriving fitness community where passion, commitment, and camaraderie come together to create an environment like no other. At Squat2Fit, we believe that fitness is more than just lifting weights or running on a treadmill; it's about the connections we make, the friendships we forge, and the shared journey towards a healthier, happier life.
+
+              </>
+
+            }
+            position="right"
+          />
+
+        </div>
+      </Layout >
     </>
   )
 }

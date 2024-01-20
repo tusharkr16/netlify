@@ -3,10 +3,13 @@
 .main_header {
     position: sticky;
     top: 0px;
+    background-color: #fff;
+    z-index: 1000;
     .brand {
         display: flex;
         gap: 12px;
         align-items: center;
+        cursor: pointer;
         img {
             max-width: 100%;
             height: auto;
@@ -14,7 +17,7 @@
             border-radius: 50%;
         }
         .title {
-            color: #fff;
+            color: #000;
             margin: 0px;
         }
     }
@@ -25,17 +28,18 @@
         align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
-        background: variables.$primary_bg;
+        background: #fff;
     }
     .main_nav .main_nav_list {
         margin: 0px;
         text-align: center;
     }
     .main_nav .main_nav_list li {
-        color: #fff;
+        color: #000;
         display: inline-block;
         padding: 0 16px;
         cursor: pointer;
+        
     }
 
     .main_nav .main_nav_list li:hover {
@@ -49,4 +53,50 @@
         }
     }
     
+}
+
+.menu-toggle {
+  display: none; 
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 5px 0;
+  transition: 0.4s;
+}
+
+
+.mobile-menu-open {
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  // Add this line
+    background-color: white;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  li {
+    padding: 10px 0;
+    font-size: 25px;
+  
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block; 
+  }
+
+  .main_nav_list {
+    display: none; 
+  }
 }

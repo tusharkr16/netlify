@@ -5,8 +5,8 @@
     margin-top: 24px;
     display: flex;
     justify-content: space-between;
-    background: variables.$primary_bg;
-    color: #fff;
+    background: white;
+    color: black;
     padding: 24px;
     align-items: center;
 
@@ -58,10 +58,11 @@
                     height: 40px;
                     line-height: 40px;
                     border-radius: 50%;
-                    background-color: #33353d;
+                    // background-color: #33353d;
                     transition: all .2s linear;
                     text-align: center;
                     cursor: pointer;
+                    border: 2px solid black;
                 }
                 .facebook:hover {
                     background-color: #29aafe;
