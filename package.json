@@ -1,34 +1,25 @@
 {
   "name": "squat2fit",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "private": true,
-  "description": "squat2fit",
-  "author": "manishsundriyal",
-  "keywords": [
-    "gatsby"
-  ],
   "scripts": {
-    "develop": "gatsby develop",
-    "start": "gatsby develop",
-    "build": "gatsby build",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.3.0",
     "@fortawesome/free-brands-svg-icons": "^6.3.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
-    "aos": "^3.0.0-beta.6",
-    "bootstrap": "^5.2.3",
-    "gatsby": "^5.5.0",
-    "gatsby-plugin-image": "^3.5.0",
-    "gatsby-plugin-sass": "^6.5.0",
-    "gatsby-plugin-sharp": "^5.5.0",
-    "gatsby-source-filesystem": "^5.5.0",
-    "gatsby-transformer-sharp": "^5.5.0",
-    "react": "^18.2.0",
-    "react-bootstrap": "^2.7.0",
-    "react-dom": "^18.2.0",
-    "sass": "^1.57.1"
+    "aos": "^2.3.4",
+    "next": "14.1.0",
+    "react": "^18",
+    "react-dom": "^18",
+    "sass": "^1.70.0"
+  },
+  "devDependencies": {
+    "eslint": "^8",
+    "eslint-config-next": "14.1.0"
   }
 }
