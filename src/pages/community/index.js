@@ -1,16 +1,15 @@
 "use client"; // This is a client component 👈🏽
 
 import React, { useEffect } from 'react'
-import { Footer, Header, HeroSection, Layout } from '../components'
-import "./page.scss"
+import { Footer, Header, HeroSection, Layout } from '../../components'
+import styles from "./page.module.scss";
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 import AOS from 'aos';
-import communityImage from '../images/community.jpeg'
+import communityImage from '@/images/community.jpeg'
 import Image from 'next/image';
 
 
 const BlogSection = (props) => {
-
   const isBrowser = () => typeof window !== "undefined"
   const isMobile = isBrowser() && window.innerWidth < 768;
   const getImage = () => (
@@ -70,7 +69,6 @@ const Community = () => {
   return (
     <>
       <Header />
-      <Layout className="contact-build">
         <div className="home">
           <BlogSection
             imgSrc={communityImage}
@@ -86,7 +84,6 @@ const Community = () => {
           />
 
         </div>
-      </Layout >
     </>
   )
 }

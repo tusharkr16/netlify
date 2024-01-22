@@ -1,6 +1,4 @@
-@use "../../styles/variables.scss" as variables;
-
-.main_header {
+.mainHeader {
     top: 0px;
     background-color: #fff;
     z-index: 1000;
@@ -29,11 +27,11 @@
         flex-wrap: wrap;
         background: #fff;
     }
-    .main_nav .main_nav_list {
+    .mainNav .main_nav_list {
         margin: 0px;
         text-align: center;
     }
-    .main_nav .main_nav_list li {
+    .mainNav .main_nav_list li {
         color: #000;
         display: inline-block;
         padding: 0 16px;
@@ -41,7 +39,7 @@
         
     }
 
-    .main_nav .main_nav_list li:hover {
+    .mainNav .main_nav_list li:hover {
         text-decoration: underline;
     }
 
@@ -69,7 +67,7 @@
 }
 
 
-.mobile-menu-open {
+.mobileMenuOpen {
   ul {
     display: flex;
     flex-direction: column;

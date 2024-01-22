@@ -1,0 +1,47 @@
+.wrapper {
+  margin-top: 24px;
+
+  .blogSection {
+    margin-bottom: 20px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0f1316;
+
+    @include desktop {
+      flex-direction: row;
+      &:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+    }
+    // img {
+    //   width: 50%;
+    //   height: auto;
+    //   // height: 250px;
+    //   margin-right: 20px;
+    //   margin-top: 40px;
+    // }
+
+    .blogText {
+      text-align: justify;
+      padding: 24px;
+      color: #fff;
+    }
+
+    h2 {
+      font-size: 34px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: center;
+    }
+
+    p {
+      font-size: 23px;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+  }
+
+}

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useRouter } from 'next/navigation'
-import './index.scss';
+// import './index.scss';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 

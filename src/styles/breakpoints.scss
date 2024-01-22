@@ -10,6 +10,24 @@ $xxl_width: 1400px;
     }
 }
 
+@mixin desktop {
+    @media only screen and (min-width: #{$md_width + 1px}) {
+        @content;
+    }
+}
+
+@mixin show-desktop {
+    @include desktop {
+        display: block;
+    }
+}
+
+@mixin hide-desktop {
+    @include desktop {
+        display: none;
+    }
+}
+
 @mixin xs {
     @media only screen and (max-width: #{$sm_width - 1px}) {
         @content;

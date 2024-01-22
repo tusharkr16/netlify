@@ -1,17 +1,17 @@
 "use client"; // This is a client component 👈🏽
 
 import React, { useEffect } from "react";
-import { Footer, Header, HeroSection, Layout } from "../components";
-import "./page.scss";
-import AboutUsImage from '../images/Aboutus.jpg';
-import AboutUs2Image from '../images/Aboutus2.jpg';
-import AboutUs3Image from '../images/Aboutus3.jpg';
+import { Footer, Header, HeroSection, Layout } from "../../components";
+import styles from "./about.module.scss";
+import AboutUsImage from '@/images/Aboutus.jpg';
+import AboutUs2Image from '@/images/Aboutus2.jpg';
+import AboutUs3Image from '@/images/Aboutus3.jpg';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 import AOS from 'aos';
 import Image from "next/image";
 
 const isMobile = false;
-const BlogSection = (props) => {
+const Section = (props) => {
   const getImage = () => (
     // <Image
     //   src={props.imgSrc}
@@ -71,9 +71,8 @@ const About = () => {
     <>
       <Header />
       <HeroSection />
-      <Layout>
-        <div className="home">
-          <BlogSection
+        <div className={styles.wrapper}>
+          <Section
             imgSrc={AboutUsImage}
             title="About Us"
             description={
@@ -86,7 +85,7 @@ const About = () => {
             }
             position="right"
           />
-          <BlogSection
+          <Section
             imgSrc={AboutUs2Image}
             title="A Community that Inspires"
             description={
@@ -102,14 +101,13 @@ const About = () => {
             }
             position="left"
           />
-          <BlogSection
+          <Section
             imgSrc={AboutUs3Image}
             title="Join the Squat2Fit Movement"
             description="As we invite you to join the Squat2Fit movement, we extend our hand in friendship and support. Whether you're a fitness enthusiast seeking a new home or someone taking the first steps towards a healthier lifestyle, Squat2Fit is where you belong. Together, let’s redefine fitness, break barriers, and create a legacy of empowered lives. Welcome to Squat2Fit – where the journey to greatness begins."
             position="right"
           />
         </div>
-      </Layout>
       <Footer />
     </>
   );

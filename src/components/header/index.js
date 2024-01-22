@@ -1,8 +1,10 @@
+"use client"
 import React, { useState } from "react";
 import { useRouter } from 'next/navigation'
-import "./index.scss";
 import companyLogo from "../../images/Squat2Fit_Logo.jpeg";
 import Image from "next/image";
+import styles from "./header.module.scss";
+import clsx from "clsx";
 
 const tabs = [
   {
@@ -41,13 +43,13 @@ const Header = () => {
 
 
   return (
-    <header className="main_header">
-      <div className="container">
-        <div className="brand" onClick={navigateToHome}>
+    <header className={styles.mainHeader}>
+      <div className={styles.container}>
+        <div className={styles.brand} onClick={navigateToHome}>
           <Image src={companyLogo} alt="Squat2Fit" />
           <h2 className="title">Squat2Fit</h2>
         </div>
-        <nav className={`main_nav ${isMobileMenuOpen ? "mobile-menu-open" : ""}`}>
+        <nav className={clsx(styles.mainNav, { [styles.mobileMenuOpen] : isMobileMenuOpen })}>
           <div className="menu-toggle" onClick={toggleMobileMenu}>
             <span className="bar"></span>
             <span className="bar"></span>

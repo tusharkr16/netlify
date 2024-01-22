@@ -1,0 +1,37 @@
+
+.layoutContainer {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+@include sm {
+    .layoutContainer {
+        max-width: 100%;
+    }
+}
+
+@include md {
+    .layoutContainer {
+        max-width: 720px;
+    }
+}
+
+@include lg {
+    .layoutContainer {
+        max-width: 960px;
+    }
+}
+
+@include xlg {
+    .layoutContainer {
+        max-width: 1140px;
+        
+    }
+}
+
+@include xxl {
+    .layoutContainer {
+        max-width: 1320px;
+    }
+}
