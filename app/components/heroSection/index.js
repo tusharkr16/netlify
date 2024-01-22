@@ -1,21 +1,28 @@
 import React, { useEffect } from "react";
+import { useRouter } from 'next/navigation'
 import './index.scss';
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 
 const HeroSection = () => {
+  const router = useRouter()
   useEffect(() => {
     AOS.init({
-      delay: 100,
-      duration: 700,
+      delay: 800,
+      duration: 1000,
     });
   }, []);
+
+  const navigateToContact = () => {
+    router.push("/contact");
+  };
   return (
     <main className="hero_section_main">
       <section className="hero_banner">
         <div className="container" data-aos="fade-left">
           <h1>Squat 2 Fit</h1>
           <p>Discover your potential & thrive within our supportive <br />community. Start today for stronger, healthier you , <br /> join us for transformation fitness journey</p>
+          <button onClick={navigateToContact}>Contact Us</button>
           {/* <h1> New Era Of </h1>
           <h1>Fitness Journey</h1> */}
           {/* <button>Get Started</button> */}

@@ -39,15 +39,11 @@ const Header = () => {
     router.push("/");
   };
 
-  const navigateTo = (route) => {
-    router.push(route);
-    window.location.reload(); // Refresh the page
-  };
 
   return (
     <header className="main_header">
       <div className="container">
-        <div className="brand" onClick={() => navigateTo("/")}>
+        <div className="brand" onClick={navigateToHome}>
           <Image src={companyLogo} alt="Squat2Fit" />
           <h2 className="title">Squat2Fit</h2>
         </div>

@@ -10,17 +10,16 @@ import 'aos/dist/aos.css'; // You can also use <link> for styles
 import AOS from 'aos';
 import Image from "next/image";
 
-
+const isMobile = false;
 const BlogSection = (props) => {
-
-  const isBrowser = () => typeof window !== "undefined"
-  const isMobile = isBrowser() && window.innerWidth < 768;
   const getImage = () => (
-    <Image
-      src={props.imgSrc}
-      alt="Image"
-      data-aos={isMobile ? "fade-up" : "fade-left"}
-    />
+    // <Image
+    //   src={props.imgSrc}
+    //   alt="Image"
+    //   width={600}
+    //   height={600}
+    // />
+    null
   );
 
   const getText = () => (

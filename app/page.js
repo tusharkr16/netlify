@@ -9,19 +9,19 @@ import CrossfitAreaImage from './images/Crossfit Area.jpg';
 import 'aos/dist/aos.css';
 import AOS from 'aos';
 import Image from "next/image";
+import "./styles/global.scss"
 
-
+const isMobile = false;
+// const isBrowser = () => typeof window !== "undefined"
+// const isMobile = isBrowser() && window.innerWidth < 768;
 const BlogSection = (props) => {
 
-  const isBrowser = () => typeof window !== "undefined"
-  const isMobile = isBrowser() && window.innerWidth < 768;
-  const getImage = () => (
-    <Image
-      src={props.imgSrc}
-      alt="Image"
-      data-aos={isMobile ? "fade-up" : "fade-left"}
-    />
-  );
+
+  const getImage = () => {
+
+
+    return null
+  };
 
   const getText = () => (
     <div className="blog-text" data-aos={isMobile ? "fade-up" : "fade-right"}>
@@ -64,8 +64,12 @@ const BlogSection = (props) => {
 const Home = () => {
   useEffect(() => {
     AOS.init({
-      delay: 100,
-      duration: 700,
+      delay: 10,
+      duration: 300,
+    });
+    const aosElements = document.querySelectorAll('[data-aos]');
+    aosElements.forEach(element => {
+      element.setAttribute('data-aos', isMobile ? "fade-up" : "fade-left");
     });
   }, []);
   return (
@@ -73,7 +77,7 @@ const Home = () => {
       <Header />
       <HeroSection />
       <Layout>
-        <div className="home" data-aos="fade-left">
+        <div className="home">
           <BlogSection
             imgSrc={communityImage}
             title="Our Community"

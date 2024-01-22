@@ -13,25 +13,20 @@ const BlogSection = (props) => {
 
   const isBrowser = () => typeof window !== "undefined"
   const isMobile = isBrowser() && window.innerWidth < 768;
-  const getImage = () => (
+  const getFrame = () => (
     <iframe
-      src={props.imgSrc}
-      frameborder="0" width="600"
-      height={isMobile ? "250px" : "650px"}
-      style={{ border: 0 }}
-      allowFullScreen=""
-      loading="lazy"
-      referrerPolicy="no-referrer-when-downgrade"
-      data-aos={isMobile ? "fade-up" : "fade-left"}
+      src={props.framesrc}
+      width={600}
+      height={600}
     />
   );
 
   const getText = () => (
-    <div className="blog-text" data-aos={isMobile ? "fade-up" : "fade-right"}>
+    <div className="blog-text">
       <h2>{props.title}</h2>
-      <p>
+      <div>
         {props.description}
-      </p>
+      </div>
     </div>
   );
 
@@ -39,7 +34,7 @@ const BlogSection = (props) => {
     if (position === 'right') {
       return (
         <>
-          {getImage()}
+          {getFrame()}
           {getText()}
         </>
       )
@@ -49,7 +44,7 @@ const BlogSection = (props) => {
       return (
         <>
           {getText()}
-          {getImage()}
+          {getFrame()}
         </>
       )
     }
@@ -66,10 +61,13 @@ const BlogSection = (props) => {
 
 const Contact = () => {
   useEffect(() => {
-    AOS.init({
-      delay: 800,
-      duration: 700,
-    });
+    if (typeof window !== 'undefined') {
+      AOS.init({
+        delay: 800,
+        duration: 700,
+      });
+
+    }
   }, []);
   return (
     <>
@@ -78,10 +76,11 @@ const Contact = () => {
       <Layout className="contact-build">
         <div className="home">
           <BlogSection
-            imgSrc="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14001.520114429526!2d77.30926370000002!3d28.678276500000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfdf839e426f7%3A0x3a45dfb8f83b3f77!2sSQUAT%202%20FIT%20unisex%20gym!5e0!3m2!1sen!2sin!4v1705770341537!5m2!1sen!2sin"
+            framesrc="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14001.520114429526!2d77.30926370000002!3d28.678276500000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfdf839e426f7%3A0x3a45dfb8f83b3f77!2sSQUAT%202%20FIT%20unisex%20gym!5e0!3m2!1sen!2sin!4v1705770341537!5m2!1sen!2sin"
             title="Contact Us"
             description={
               <>
+
                 <strong>Address:</strong>
                 <br />
                 1ST FLOOR SIKKA CHAM B BLOCK DDA MARKET

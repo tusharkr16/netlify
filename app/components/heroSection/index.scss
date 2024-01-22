@@ -1,7 +1,6 @@
 @use "../../styles/breakpoints.scss" as bp;
 
 .hero_section_main {
-  height: 100%;
 
   .hero_banner {
     background-image: url("../../images/Herobanner.jpg");
@@ -27,7 +26,7 @@
         text-shadow: -1px -1px 0 #fff, -9px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
         margin: auto;
          @media screen and (max-width: 768px) {
-          font-size: 78px; // Adjust font size for mobile devices
+          font-size: 65px; // Adjust font size for mobile devices
           line-height: 140px;
         }
       }
@@ -38,13 +37,14 @@
         font-size: 25px;
         text-shadow: -1px -1px 0 #fff, -2px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
         @media screen and (max-width: 768px) {
-          font-size: 17px; // Adjust font size for mobile devices
+          font-size: 14px; // Adjust font size for mobile devices
           text-shadow:none;
           margin-top: 20px;
         }
       }
 
       button {
+        margin-top:  30px !important;
         font-size: 1.2rem;
         cursor: pointer;
         outline: 0;

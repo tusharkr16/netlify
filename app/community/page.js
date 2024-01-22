@@ -17,7 +17,8 @@ const BlogSection = (props) => {
     <Image
       src={props.imgSrc}
       alt="Image"
-      data-aos={isMobile ? "fade-up" : "fade-left"}
+      width={600}
+      height={600}
     />
   );
 
@@ -73,7 +74,7 @@ const Community = () => {
         <div className="home">
           <BlogSection
             imgSrc={communityImage}
-            title="Our Vibrant Community"
+            title="Our Community"
             description={
               <>
                 Welcome to the heart of Squat2Fit — our thriving fitness community where passion, commitment, and camaraderie come together to create an environment like no other. At Squat2Fit, we believe that fitness is more than just lifting weights or running on a treadmill; it's about the connections we make, the friendships we forge, and the shared journey towards a healthier, happier life.
