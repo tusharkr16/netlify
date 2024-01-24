@@ -1,6 +1,7 @@
+
 @use "../../styles/variables.scss" as variables;
 @use '../../styles/breakpoints.scss' as bp;
-
+@import "../../styles/breakpoints.scss";
 .footer {
     margin-top: 24px;
     display: flex;
@@ -15,7 +16,7 @@
         margin-right: auto;
         width: 100%;
         display: flex;
-        .footer_item {
+        .footerItem {
             flex-grow: 1;
             width: 33%;
             display: flex;
@@ -45,15 +46,15 @@
             .wrapper {
                 margin-left: auto;
             }
-            .icon_wrapper a {
+            .iconWrapper a {
                 color: inherit;
                 text-decoration: none;
             }
-            .icon_wrapper {
+            .iconWrapper {
                 display: flex;
                 gap: 8px;
 
-                .social_icon {
+                .socialIcon {
                     width: 40px;
                     height: 40px;
                     line-height: 40px;
@@ -77,35 +78,5 @@
         }
     }
 
-    @include bp.sm {
-        .container {
-            max-width: 100%;
-        }
-    }
-    
-    @include bp.md {
-        .container {
-            max-width: 720px;
-        }
-    }
-    
-    @include bp.lg {
-        .container {
-            max-width: 960px;
-        }
-    }
-    
-    @include bp.xlg {
-        .container {
-            max-width: 1140px;
-            
-        }
-    }
-    
-    @include bp.xxl {
-        .container {
-            max-width: 1320px;
-        }
-    }
 
 }

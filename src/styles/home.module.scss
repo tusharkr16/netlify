@@ -1,3 +1,4 @@
+@import "../styles/breakpoints.scss";
 .wrapper {
   margin-top: 24px;
 
@@ -7,12 +8,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #0f1316;
+    background-color: rgb(15 19 22);
 
     @include desktop {
       flex-direction: row;
       &:nth-child(even) {
         flex-direction: row-reverse;
+      }
+
+      img{
+       width: 678px;
+      height: auto;
+      margin-right: 20px;
+      margin-top: 40px;
       }
     }
     // img {
@@ -45,3 +53,4 @@
   }
 
 }
+

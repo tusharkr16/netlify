@@ -47,15 +47,15 @@ const Header = () => {
       <div className={styles.container}>
         <div className={styles.brand} onClick={navigateToHome}>
           <Image src={companyLogo} alt="Squat2Fit" />
-          <h2 className="title">Squat2Fit</h2>
+          <h2 className={styles.title}>Squat2Fit</h2>
         </div>
-        <nav className={clsx(styles.mainNav, { [styles.mobileMenuOpen] : isMobileMenuOpen })}>
-          <div className="menu-toggle" onClick={toggleMobileMenu}>
-            <span className="bar"></span>
-            <span className="bar"></span>
-            <span className="bar"></span>
+        <nav className={clsx(styles.mainNav, { [styles.mobileMenuOpen]: isMobileMenuOpen })}>
+          <div className={styles.menuToggle} onClick={toggleMobileMenu}>
+            <span className={styles.bar}></span>
+            <span className={styles.bar}></span>
+            <span className={styles.bar}></span>
           </div>
-          <ul className="main_nav_list">
+          <ul className={styles.mainnavList}>
             {tabs.map((tab) => (
               <li key={tab.title} role="button" onClick={() => router.push(tab.route)}>
                 {tab.title}

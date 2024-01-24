@@ -2,14 +2,16 @@ import React from "react";
 import { faFacebookF, faInstagram, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import "./index.scss";
+import style from "./footer.module.scss"
+
 
 const Footer = () => {
   return (
-    <footer className="footer">
-      <div className="container">
-        <div className="about footer_item">
-          <h3 className="title">Squat2Fit Unisex Gym</h3>
-          <div className="description">
+    <footer className={style.footer}>
+      <div className={style.container}>
+        <div className={style.footerItem}>
+          <h3 className={style.title}>Squat2Fit Unisex Gym</h3>
+          <div className={style.description}>
             <strong>Address:</strong>
             <br />
             1ST FLOOR SIKKA CHAM B BLOCK DDA MARKET
@@ -24,17 +26,17 @@ const Footer = () => {
             SQUAT2FIT@SQUAT2FIT.IN
           </div>
         </div>
-        <div className="contact footer_item">
-          <div className="wrapper">
-            <h3 className="title">Connect With Us On :</h3>
-            <div className="icon_wrapper">
-              <a className="social_icon facebook" href="https://www.facebook.com/pages/Squat2fit-Unisex-gym/113054150112092" target="_blank">
+        <div className={style.footerItem}>
+          <div className={style.wrapper}>
+            <h3 className={style.title}>Connect With Us On :</h3>
+            <div className={style.iconwrapper}>
+              <a className={style.socialIcon} href="https://www.facebook.com/pages/Squat2fit-Unisex-gym/113054150112092" target="_blank">
                 <FontAwesomeIcon icon={faFacebookF} />
               </a>
-              <a className="social_icon instagram" href="https://www.instagram.com/squat2fit/" target="_blank">
+              <a className={style.socialIcon} href="https://www.instagram.com/squat2fit/" target="_blank">
                 <FontAwesomeIcon icon={faInstagram} />
               </a>
-              <a className="social_icon whatsapp" href="https://api.whatsapp.com/send?phone=9999777798&text=Hello" target="_blank">
+              <a className={style.socialIcon} href="https://api.whatsapp.com/send?phone=9999777798&text=Hello" target="_blank">
                 <FontAwesomeIcon icon={faWhatsapp} />
               </a>
             </div>
