@@ -1,5 +1,4 @@
 "use client"; // This is a client component 👈🏽
-
 import Image from "next/image";
 import React from "react";
 import { Footer, HeroSection, Layout } from "@/components";

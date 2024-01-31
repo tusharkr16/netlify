@@ -8,7 +8,6 @@ import AboutUs3Image from '@/images/Aboutus3.jpg';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 import AOS from 'aos';
 import Image from "next/image";
-import style from "./about.module.scss"
 import styles from "../../styles/home.module.scss"
 
 const isMobile = false;
@@ -71,7 +70,6 @@ const About = () => {
           position="right"
         />
       </div>
-      <Footer />
     </>
   );
 };

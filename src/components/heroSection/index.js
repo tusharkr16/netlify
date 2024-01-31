@@ -1,6 +1,7 @@
 import React from "react";
 // import style from "../../styles/home.module.scss";
 import style from "./hersection.module.scss"
+import clsx from "clsx";
 
 
 const HeroSection = () => {

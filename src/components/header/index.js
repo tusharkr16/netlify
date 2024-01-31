@@ -30,7 +30,7 @@ const Header = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
-    setMobileMenuOpen(!isMobileMenuOpen);
+    setMobileMenuOpen((prev) => !prev);
   };
 
   const closeMobileMenu = () => {
@@ -39,6 +39,7 @@ const Header = () => {
 
   const navigateToHome = () => {
     router.push("/");
+    closeMobileMenu();
   };
 
 
@@ -57,7 +58,7 @@ const Header = () => {
           </div>
           <ul className={styles.mainnavList}>
             {tabs.map((tab) => (
-              <li key={tab.title} role="button" onClick={() => router.push(tab.route)}>
+              <li key={tab.title} role="button" onClick={() => { router.push(tab.route); closeMobileMenu(); }}>
                 {tab.title}
               </li>
             ))}
